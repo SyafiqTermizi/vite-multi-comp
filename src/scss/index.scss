@@ -1,0 +1,92 @@
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/card";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+$primary-color: #4e73df;
+
+body {
+    background-color: #f2f6fc;
+}
+
+.no-margin-row {
+  @extend .row;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.scrollable {
+  /* Hide scrollbar */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  mask-image: linear-gradient(180deg, #000 60%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+/* Chrome, Safari, and Opera */
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-purple {
+  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  background-color: #2e59d9;
+  border-color: #2653d4;
+}
+
+.btn-purple.focus,
+.btn-purple:focus {
+  color: #fff;
+  background-color: #2e59d9;
+  border-color: #2653d4;
+  box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
+}
+
+.btn-purple.disabled,
+.btn-purple:disabled {
+  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.card-prayer-time {
+    min-height: 202.2px;
+}
+
+.fixed-height-card {
+  height: 304px;
+}
+
+.fixed-height-card-primary-bg {
+    @extend .fixed-height-card;
+    background-color: $primary-color;
+    background-image: linear-gradient(180deg,$primary-color 10%,#224abe 100%);
+    background-size: cover;
+    color: white;
+}
